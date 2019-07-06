@@ -191,34 +191,23 @@ var themeMenus = {};
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;I\&apos;m \&quot;OK\&quot;!&apos;</span><br></pre></td></tr></table></figure>
 
 <p>表示的字符串内容是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I&apos;m &quot;OK&quot;!</span><br><span class="line">``` </span><br><span class="line">如果字符串里面有很多字符都需要转义，就需要加很多\，为了简化，Python还允许用r&apos;&apos;表示&apos;&apos;内部的字符串默认不转义</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I&apos;m &quot;OK&quot;!</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>print(r’\\t\‘)<br>\\t\</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Python允许用&apos;&apos;&apos;...&apos;&apos;&apos;的格式表示多行内容</span><br></pre></td></tr></table></figure>
+<p>如果字符串里面有很多字符都需要转义，就需要加很多\，为了简化，Python还允许用r’’表示’’内部的字符串默认不转义  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(r&apos;\\\t\\&apos;)</span><br><span class="line">\\\t\\</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<blockquote>
-<blockquote>
-<p>print(‘’’line1<br>… line2<br>… line3’’’)<br>line1<br>line2<br>line3</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">其中...是在交互式命令行代替&gt;&gt;&gt;的，不是代码的一部分，写成程序就是</span><br></pre></td></tr></table></figure>
+<p>Python允许用’’’…’’’的格式表示多行内容  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(&apos;&apos;&apos;line1</span><br><span class="line">... line2</span><br><span class="line">... line3&apos;&apos;&apos;)</span><br><span class="line">line1</span><br><span class="line">line2</span><br><span class="line">line3</span><br></pre></td></tr></table></figure>
 
-<p>print(‘’’line1<br>line2<br>line3’’’)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line">在Python中，有两种除法`/`和`//`，`/`的计算结果为浮点数</span><br></pre></td></tr></table></figure>
+<p>其中…是在交互式命令行代替&gt;&gt;&gt;的，不是代码的一部分，写成程序就是</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(&apos;&apos;&apos;line1</span><br><span class="line">line2</span><br><span class="line">line3&apos;&apos;&apos;)</span><br></pre></td></tr></table></figure>
 
-<p>10 / 3<br>3.3333333333333335</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">而地板除`//`只取结果的整数部分</span><br></pre></td></tr></table></figure>
+<hr>
+<p>在Python中，有两种除法<code>/</code>和<code>//</code>，<code>/</code>的计算结果为浮点数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10 / 3</span><br><span class="line">3.3333333333333335</span><br></pre></td></tr></table></figure>
 
-<p>10 // 3<br>3<br>```</p>
-
+<p>而地板除<code>//</code>只取结果的整数部分</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10 // 3</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="entry-meta entry-footer">
