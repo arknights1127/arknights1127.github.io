@@ -266,7 +266,7 @@ var themeMenus = {};
 <h5 id="决策树与if-then规则："><a href="#决策树与if-then规则：" class="headerlink" title="决策树与if-then规则："></a>决策树与if-then规则：</h5><p>将决策树转化为if-then规则集合：由决策树的根结点到叶结点的每一条路径构建一条规则：路径的内部结点的特征对应规则的条件，叶结点的类对应规则的结论。<br>必须满足<strong>互斥且完备</strong>的条件：每一个实例都被且仅被一条路径(规则)所覆盖。</p>
 <hr>
 <h5 id="决策树与条件概率分布："><a href="#决策树与条件概率分布：" class="headerlink" title="决策树与条件概率分布："></a>决策树与条件概率分布：</h5><p>决策树可以表示给定特征条件下类的条件概率分布，这一条件概率分布定义在特征空间的一个划分上。决策树的一条路径对应划分中的一个单元。决策树所表示的条件概率分布由各个单元给定条件下类的条件概率分布组成。</p>
-<p><img src="/images/pasted-6.png" alt="upload successful"><br>如图，假设只有两个类(正类和负类)，图(b)为各个单元给定条件下的条件概率分布，其中当某个单元c的条件概率分布满足P(Y=+1|X=c) &gt; 0.5时，就认为该单元属于正类（各个单元的条件概率分布都不相同），如$a_1 \leq x^(1) \leq 1,0 \leq x^(2) \leq a_3$时，条件概率小于0.5，所以属于负类</p>
+<p><img src="/images/pasted-6.png" alt="upload successful"><br>如图，假设只有两个类(正类和负类)，图(b)为各个单元给定条件下的条件概率分布，其中当某个单元c的条件概率分布满足P(Y=+1|X=c) &gt; 0.5时，就认为该单元属于正类（各个单元的条件概率分布都不相同），如$a_1 \leq x^{(1)} \leq 1,0 \leq x^{(2)} \leq a_3$时，条件概率小于0.5，所以属于负类</p>
 
       
     </div>
@@ -999,6 +999,6 @@ var themeMenus = {};
             all[i].SourceElement().parentNode.className += ' has-jax';
     });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":300,"height":600},"mobile":{"show":true}});</script></body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":300,"height":600},"mobile":{"show":true}});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 </html>
