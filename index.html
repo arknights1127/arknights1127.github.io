@@ -194,6 +194,68 @@ var themeMenus = {};
         
           <section id="main">
   
+    <article id="post-hello-world"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2019/08/10/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/2019/08/10/hello-world/" class="article-date">
+	  <time datetime="2019-08-10T05:45:09.000Z" itemprop="datePublished">August 10, 2019</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+            <div class="entry-summary" style="margin-left:0;">
+            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new post1$ hexo new "My New Post"
+More info: Writing
+Run server1$ hexo server
+More info: Server
+Generate static files1$ hexo generat...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/2019/08/10/hello-world/#more">阅读全文</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/categories/算法导论/">算法导论</a>
+
+      
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
     <article id="post-逻辑斯谛回归与最大熵模型"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -261,13 +323,23 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="定义-决策树"><a href="#定义-决策树" class="headerlink" title="定义(决策树):"></a>定义(决策树):</h4><p><strong>分类决策树是一种描述对实例进行分类的树形结构。决策树由结点node，有向边direct edge组成。结点有两种类型，内部结点(表示一个特征和属性)，叶结点(表示一个类)。</strong></p>
-<hr>
-<h5 id="决策树与if-then规则："><a href="#决策树与if-then规则：" class="headerlink" title="决策树与if-then规则："></a>决策树与if-then规则：</h5><p>将决策树转化为if-then规则集合：由决策树的根结点到叶结点的每一条路径构建一条规则：路径的内部结点的特征对应规则的条件，叶结点的类对应规则的结论。<br>必须满足<strong>互斥且完备</strong>的条件：每一个实例都被且仅被一条路径(规则)所覆盖。</p>
-<hr>
-<h5 id="决策树与条件概率分布："><a href="#决策树与条件概率分布：" class="headerlink" title="决策树与条件概率分布："></a>决策树与条件概率分布：</h5><p>决策树可以表示给定特征条件下类的条件概率分布，这一条件概率分布定义在特征空间的一个划分上。决策树的一条路径对应划分中的一个单元。决策树所表示的条件概率分布由各个单元给定条件下类的条件概率分布组成。</p>
-<p><img src="/images/pasted-6.png" alt="upload successful"><br>如图，假设只有两个类(正类和负类)，图(b)为各个单元给定条件下的条件概率分布，其中当某个单元c的条件概率分布满足P(Y=+1|X=c) &gt; 0.5时，就认为该单元属于正类（各个单元的条件概率分布都不相同），如$a_1 \leq x^{(1)} \leq 1,0 \leq x^{(2)} \leq a_3$时，条件概率小于0.5，所以属于负类</p>
+        
 
+          
+            <div class="entry-summary" style="margin-left:0;">
+            定义(决策树):分类决策树是一种描述对实例进行分类的树形结构。决策树由结点node，有向边direct edge组成。结点有两种类型，内部结点(表示一个特征和属性)，叶结点(表示一个类)。
+
+决策树与if-then规则：将决策树转化为if-then规则集合：由决策树的根结点到叶结点的每一条路径构建一条规则：路径的内部结点的特征对应规则的条件，叶结点的类对应规则的结论。必须满足互斥且完备的条件：每一个实例都被且仅被一条路径(规则)所覆盖。
+
+决策树与条件概率分布：决策树可以表示给定特征条件下类的条件概率分布，这一条件概率分布定义在特征空间的一个划分上。决策树的一条路径对应划分中的一个单元。决策树所表示的条件概率分布由各个单元给定条件下类的条件概率分布组成。
+如图，假设只有两个类(正类和负...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/2019/08/10/决策树/#more">阅读全文</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -310,17 +382,22 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="OSI体系结构"><a href="#OSI体系结构" class="headerlink" title="OSI体系结构"></a>OSI体系结构</h4><p>&ensp;&ensp;&ensp;&ensp;共分为七个层次：<strong>物理层PH，链路层DL，网络层N，运输层T，会话层S，表示层P，应用层A。</strong></p>
-<p><img src="/images/pasted-4.png" alt="OSI"> </p>
-<hr>
-<h4 id="TCP-IP模型"><a href="#TCP-IP模型" class="headerlink" title="TCP/IP模型"></a>TCP/IP模型</h4><p><img src="/images/pasted-5.png" alt="upload successful">  </p>
-<hr>
-<h4 id="常见的应用层协议"><a href="#常见的应用层协议" class="headerlink" title="常见的应用层协议"></a>常见的应用层协议</h4><h5 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h5><p><strong>IP地址</strong>：互联网协议地址，又称网际协议地址，是IP协议提供的一种统一的地址格式，它为互联网的每一个网络，每一台主机提供一个逻辑地址，以此屏蔽物理地址的差异。<br><strong>子网掩码</strong>：指明一个IP地址的哪些位标识的是主机所在的子网，以及哪些位标识是主机的位掩码。子网掩码只有一个作用就是将某个IP地址划分为网络地址和主机地址两部分<br><strong>网关</strong>：在子网中找不到目标时要查询的地址。<br><strong>DHCP服务器</strong>：一个局域网的网络协议，使用UDP协议工作，<br>两个用途：(1)用于内部网或网络供应服务商自动分配IP地址。<br>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;(2)内部网管理员对所有计算机做中央管理的手段。<br><strong>端口</strong>：设备与外界通讯交流的出口。可分为虚拟端口和物理端口，虚拟端口指计算机内部或交换机路由器内的端口，不可见。 </p>
-<hr>
-<p><strong>DNS协议</strong><br>域名系统(DomainNameSystem),每一个域名都对应一个唯一的IP地址，DNS就是进行域名解析的服务器。<br><strong>FTP协议</strong><br>包括FTP服务器，FTP客户端两个组成部分。用户可以使用FIP客户端通过FTP协议访问位于FTP服务器上的资源。FTP传输效率非常高，在网络上传输大文件时也采用该协议。<br>FTP协议默认使用20和21端口，20端口用于传输数据，21端口用于传输控制信息。<br><strong>DHCP协议</strong><br>动态主机设置协议(Dynamic Host Configuration Protocol)是一个局域网的网络协议，使用UDP协议工作，用途同上面的DHCP服务器用途<br><strong>HTTP协议</strong><br>HTTP是一个简单的请求-响应协议，通常运行在TCP之上。它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。<br><strong>ICMP协议</strong><br>Internet控制报文协议，用于在IP主机和路由器之间传递控制消息。  </p>
-<hr>
-<p><strong>渗透测试流程</strong><br>前期交互，情报搜集，威胁建模，漏洞分析，渗透攻击，后渗透攻击，报告。<br><strong>渗透测试分类</strong><br>黑盒测试<br>白盒测试<br>灰盒测试</p>
+        
 
+          
+            <div class="entry-summary" style="margin-left:0;">
+            OSI体系结构&ensp;&ensp;&ensp;&ensp;共分为七个层次：物理层PH，链路层DL，网络层N，运输层T，会话层S，表示层P，应用层A。 
+
+TCP/IP模型  
+
+常见的应用层协议概念IP地址：互联网协议地址，又称网际协议地址，是IP协议提供的一种统一的地址格式，它为互联网的每一个网络，每一台主机提供一个逻辑地址，以此屏蔽物理地址的差异。子网掩码：指明一个IP地址的哪些位标识的是主机所在的子网，以及哪些位标识是主机的位掩码。子网掩码只有一个作用就是将某个IP地址划分为网络地址和主机地址两部分网关：在子网中找不到目标时要查询的地址。DHCP服务器：一个局域网的网络协议，使用UDP协议工作，两个用途：(1)用于内部网或网络供应服务商自动分配IP地址。&ensp;&ensp...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/2019/07/12/网络攻防实践/#more">阅读全文</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -363,8 +440,19 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="IP地址和URL"><a href="#IP地址和URL" class="headerlink" title="IP地址和URL"></a><strong>IP</strong>地址和<strong>URL</strong></h4><p>通常一个主机（host）只有一个网络接口，即只有一个Internet地址，IP地址。<br><strong>InetAddress</strong>类</p>
+        
 
+          
+            <div class="entry-summary" style="margin-left:0;">
+            IP地址和URL通常一个主机（host）只有一个网络接口，即只有一个Internet地址，IP地址。InetAddress类
+
+          
+
+        
+          <p class="article-more-link">
+            <a href="/2019/07/08/ip地址和URL/#more">阅读全文</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -407,15 +495,24 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="输入输出基础："><a href="#输入输出基础：" class="headerlink" title="输入输出基础："></a>输入输出基础：</h4><hr>
-<p>1.java I/O流<br><strong>四个抽象类</strong>(object类的直接子类):<br>&ensp;&ensp;byte字节流：<code>InputStream</code>,<code>OutputStream</code>；<br>&ensp;&ensp;char(双字节)字符流：<code>Reader</code>,<code>Writer</code><br>File,Buffered<br><strong>两个桥梁</strong>：<code>InputStreamReader</code>,<code>OutputStreamWriter</code>  </p>
-<p><img src="/images/pasted-1.png" alt="类的相互封装"><br>例如想按行读取文件，可以将文件字符流包装成缓存字符流来读取。  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BufferedReader bfr = new BufferedReader(new FileReader(&quot;test.txt&quot;));</span><br></pre></td></tr></table></figure>
+        
 
-<hr>
-<p><img src="/images/pasted-2.png" alt="InputStream分支"></p>
-<hr>
+          
+            <div class="entry-summary" style="margin-left:0;">
+            输入输出基础：
+1.java I/O流四个抽象类(object类的直接子类):&ensp;&ensp;byte字节流：InputStream,OutputStream；&ensp;&ensp;char(双字节)字符流：Reader,WriterFile,Buffered两个桥梁：InputStreamReader,OutputStreamWriter  
+例如想按行读取文件，可以将文件字符流包装成缓存字符流来读取。1BufferedReader bfr = new BufferedReader(new FileReader(&quot;test.txt&quot;));
 
+
+
+
+          
+
+        
+          <p class="article-more-link">
+            <a href="/2019/07/08/java输入输出基础/#more">阅读全文</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -458,27 +555,22 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>转义字符 \</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;I\&apos;m \&quot;OK\&quot;!&apos;</span><br></pre></td></tr></table></figure>
+        
 
-<p>表示的字符串内容是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I&apos;m &quot;OK&quot;!</span><br></pre></td></tr></table></figure>
+          
+            <div class="entry-summary" style="margin-left:0;">
+            转义字符 \1&apos;I\&apos;m \&quot;OK\&quot;!&apos;
+表示的字符串内容是：1I&apos;m &quot;OK&quot;!
+如果字符串里面有很多字符都需要转义，就需要加很多\，为了简化，Python还允许用r’’表示’’内部的字符串默认不转义12&gt;&gt;&gt; print(r&apos;\\\t\\&apos;)\\\t\\
+Python允许用’’’…’’’的格式表示多行内容123456&gt;&gt;&gt; print(&apos;&apos;&apos;line1... line2... line3&apos;&apos;&apos;)line1line2line3
+其中…是在交互式命令行代替&gt;&gt;&gt;的，不是代码...
+          
 
-<p>如果字符串里面有很多字符都需要转义，就需要加很多\，为了简化，Python还允许用r’’表示’’内部的字符串默认不转义  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(r&apos;\\\t\\&apos;)</span><br><span class="line">\\\t\\</span><br></pre></td></tr></table></figure>
-
-<p>Python允许用’’’…’’’的格式表示多行内容  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(&apos;&apos;&apos;line1</span><br><span class="line">... line2</span><br><span class="line">... line3&apos;&apos;&apos;)</span><br><span class="line">line1</span><br><span class="line">line2</span><br><span class="line">line3</span><br></pre></td></tr></table></figure>
-
-<p>其中…是在交互式命令行代替&gt;&gt;&gt;的，不是代码的一部分，写成程序就是</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">print(&apos;&apos;&apos;line1</span><br><span class="line">line2</span><br><span class="line">line3&apos;&apos;&apos;)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>在Python中，有两种除法<code>/</code>和<code>//</code>，<code>/</code>的计算结果为浮点数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10 / 3</span><br><span class="line">3.3333333333333335</span><br></pre></td></tr></table></figure>
-
-<p>而地板除<code>//</code>只取结果的整数部分</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">10 // 3</span><br><span class="line">3</span><br></pre></td></tr></table></figure>
+        
+          <p class="article-more-link">
+            <a href="/2019/07/06/Python/#more">阅读全文</a>
+          </p>
+        </div>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -574,65 +666,6 @@ var themeMenus = {};
     </div>
     <footer class="entry-meta entry-footer">
       
-      
-      
-            
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-    
-
-  
-    <article id="post-hello-world"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2019/06/30/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/2019/06/30/hello-world/" class="article-date">
-	  <time datetime="2019-06-30T11:10:42.164Z" itemprop="datePublished">June 30, 2019</time>
-	</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/categories/算法导论/">算法导论</a>
-
       
       
             
@@ -774,6 +807,18 @@ var themeMenus = {};
               <div class="widget-entry-summary" style="margin: 0;">
             
 
+              <h6 style="margin: 0;"><a href="/2019/08/10/hello-world/">Hello World</a></h6>
+              <span>August 10, 2019</span>
+            </div>
+
+          </li>
+        
+          <li class="clearfix">
+
+            
+              <div class="widget-entry-summary" style="margin: 0;">
+            
+
               <h6 style="margin: 0;"><a href="/2019/08/10/逻辑斯谛回归与最大熵模型/">逻辑斯谛回归与最大熵模型</a></h6>
               <span>August 10, 2019</span>
             </div>
@@ -828,18 +873,6 @@ var themeMenus = {};
 
           </li>
         
-          <li class="clearfix">
-
-            
-              <div class="widget-entry-summary" style="margin: 0;">
-            
-
-              <h6 style="margin: 0;"><a href="/2019/07/06/Python/">Python</a></h6>
-              <span>July 6, 2019</span>
-            </div>
-
-          </li>
-        
       </ul>
     </div>
   </div>
@@ -865,7 +898,7 @@ var themeMenus = {};
     <h3 class="widget-title">归档</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">1</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">6</span></li></ul>
     </div>
   </div>
 

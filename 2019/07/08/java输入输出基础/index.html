@@ -51,19 +51,19 @@
   
   
   
-  <meta name="description" content="输入输出基础： 1.java I/O流四个抽象类(object类的直接子类):&amp;ensp;&amp;ensp;byte字节流：InputStream,OutputStream；&amp;ensp;&amp;ensp;char(双字节)字符流：Reader,WriterFile,Buffered两个桥梁：InputStreamReader,OutputStreamWriter   例如想按行读取文件，可以将文件字符流包装成">
+  <meta name="description" content="输入输出基础：    1.java I/O流 四个抽象类(object类的直接子类): byte字节流：InputStream,OutputStream； char(双字节)字符流：Reader,Writer File,Buffered 两个桥梁：InputStreamReader,OutputStreamWriter    例如想按行读取文件，可以将文件字符流包装成缓存字符流来读取。 1   B">
 <meta property="og:type" content="article">
 <meta property="og:title" content="java输入输出基础">
 <meta property="og:url" content="http://yoursite.com/2019/07/08/java输入输出基础/index.html">
 <meta property="og:site_name" content="否定之否定的博客">
-<meta property="og:description" content="输入输出基础： 1.java I/O流四个抽象类(object类的直接子类):&amp;ensp;&amp;ensp;byte字节流：InputStream,OutputStream；&amp;ensp;&amp;ensp;char(双字节)字符流：Reader,WriterFile,Buffered两个桥梁：InputStreamReader,OutputStreamWriter   例如想按行读取文件，可以将文件字符流包装成">
+<meta property="og:description" content="输入输出基础：    1.java I/O流 四个抽象类(object类的直接子类): byte字节流：InputStream,OutputStream； char(双字节)字符流：Reader,Writer File,Buffered 两个桥梁：InputStreamReader,OutputStreamWriter    例如想按行读取文件，可以将文件字符流包装成缓存字符流来读取。 1   B">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/pasted-1.png">
 <meta property="og:image" content="http://yoursite.com/images/pasted-2.png">
-<meta property="og:updated_time" content="2019-07-08T09:27:46.721Z">
+<meta property="og:updated_time" content="2019-08-10T05:44:39.984Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java输入输出基础">
-<meta name="twitter:description" content="输入输出基础： 1.java I/O流四个抽象类(object类的直接子类):&amp;ensp;&amp;ensp;byte字节流：InputStream,OutputStream；&amp;ensp;&amp;ensp;char(双字节)字符流：Reader,WriterFile,Buffered两个桥梁：InputStreamReader,OutputStreamWriter   例如想按行读取文件，可以将文件字符流包装成">
+<meta name="twitter:description" content="输入输出基础：    1.java I/O流 四个抽象类(object类的直接子类): byte字节流：InputStream,OutputStream； char(双字节)字符流：Reader,Writer File,Buffered 两个桥梁：InputStreamReader,OutputStreamWriter    例如想按行读取文件，可以将文件字符流包装成缓存字符流来读取。 1   B">
 <meta name="twitter:image" content="http://yoursite.com/images/pasted-1.png">
   
     <link rel="alternate" href="/atom.xml" title="否定之否定的博客" type="application/atom+xml">
@@ -229,13 +229,11 @@ var themeMenus = {};
       
         <h4 id="输入输出基础："><a href="#输入输出基础：" class="headerlink" title="输入输出基础："></a>输入输出基础：</h4><hr>
 <p>1.java I/O流<br><strong>四个抽象类</strong>(object类的直接子类):<br>&ensp;&ensp;byte字节流：<code>InputStream</code>,<code>OutputStream</code>；<br>&ensp;&ensp;char(双字节)字符流：<code>Reader</code>,<code>Writer</code><br>File,Buffered<br><strong>两个桥梁</strong>：<code>InputStreamReader</code>,<code>OutputStreamWriter</code>  </p>
-<p><img src="/images/pasted-1.png" alt="类的相互封装"><br>例如想按行读取文件，可以将文件字符流包装成缓存字符流来读取。  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BufferedReader bfr = new BufferedReader(new FileReader(&quot;test.txt&quot;));</span><br></pre></td></tr></table></figure>
-
+<p><img src="/images/pasted-1.png" alt="类的相互封装"><br>例如想按行读取文件，可以将文件字符流包装成缓存字符流来读取。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">BufferedReader bfr = new BufferedReader(new FileReader(&quot;test.txt&quot;));</span><br></pre></td></tr></table></figure></p>
 <hr>
 <p><img src="/images/pasted-2.png" alt="InputStream分支"></p>
 <hr>
-
+<a id="more"></a>
       
     </div>
     <footer class="entry-meta entry-footer">
