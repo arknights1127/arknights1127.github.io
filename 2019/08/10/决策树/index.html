@@ -60,7 +60,8 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/images/pasted-6.png">
 <meta property="og:image" content="http://yoursite.com/images/pasted-9.png">
-<meta property="og:updated_time" content="2019-08-13T03:01:21.319Z">
+<meta property="og:image" content="http://yoursite.com/images/pasted-10.png">
+<meta property="og:updated_time" content="2019-08-19T02:51:54.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="决策树">
 <meta name="twitter:description" content="定义(决策树) 分类决策树是一种描述对实例进行分类的树形结构。决策树由结点node，有向边direct edge组成。结点有两种类型，内部结点(表示一个特征和属性)，叶结点(表示一个类)。     决策树与if-then规则 将决策树转化为if-then规则集合：由决策树的根结点到叶结点的每一条路径构建一条规则：路径的内部结点的特征对应规则的条件，叶结点的类对应规则的结论。 必须满足互斥且完备的条">
@@ -232,7 +233,7 @@ var themeMenus = {};
 <h5 id="决策树与if-then规则"><a href="#决策树与if-then规则" class="headerlink" title="决策树与if-then规则"></a>决策树与if-then规则</h5><p>&emsp;&emsp;将决策树转化为if-then规则集合：由决策树的根结点到叶结点的每一条路径构建一条规则：路径的内部结点的特征对应规则的条件，叶结点的类对应规则的结论。<br>必须满足<strong>互斥且完备</strong>的条件：每一个实例都被且仅被一条路径(规则)所覆盖。</p>
 <hr>
 <h5 id="决策树与条件概率分布"><a href="#决策树与条件概率分布" class="headerlink" title="决策树与条件概率分布"></a>决策树与条件概率分布</h5><p>&emsp;&emsp;决策树可以表示给定特征条件下类的条件概率分布，这一条件概率分布定义在特征空间的一个划分上。决策树的一条路径对应划分中的一个单元。决策树所表示的条件概率分布由各个单元给定条件下类的条件概率分布组成。</p>
-<p><img src="/images/pasted-6.png" alt="upload successful"><br>如图，假设只有两个类(正类和负类)，图(b)为各个单元给定条件下的条件概率分布，其中当某个单元c的条件概率分布满足P(Y=+1|X=c) &gt; 0.5时，就认为该单元属于正类（各个单元的条件概率分布都不相同），如$a_1 \leq x^{(1)} \leq 1,0 \leq x^{(2)} \leq a_3$时，条件概率小于0.5，所以属于负类。<br><a id="more"></a></p>
+<p><img src="/images/pasted-6.png" alt="决策树与条件概率分布"><br>如图，假设只有两个类(正类和负类)，图(b)为各个单元给定条件下的条件概率分布，其中当某个单元c的条件概率分布满足P(Y=+1|X=c) &gt; 0.5时，就认为该单元属于正类（各个单元的条件概率分布都不相同），如$a_1 \leq x^{(1)} \leq 1,0 \leq x^{(2)} \leq a_3$时，条件概率小于0.5，所以属于负类。<br><a id="more"></a></p>
 <h5 id="决策树学习算法包括特征选择，决策树的生成，决策树的剪枝过程。"><a href="#决策树学习算法包括特征选择，决策树的生成，决策树的剪枝过程。" class="headerlink" title="决策树学习算法包括特征选择，决策树的生成，决策树的剪枝过程。"></a>决策树学习算法包括特征选择，决策树的生成，决策树的剪枝过程。</h5><hr>
 <h4 id="特征选择"><a href="#特征选择" class="headerlink" title="特征选择"></a>特征选择</h4><p>1.通常特征选择的准则是<strong>信息增益或信息增益比</strong>。<br>2.特征选择是决定用哪个特征来划分特征空间。  </p>
 <h5 id="信息增益-信息论与编码相关"><a href="#信息增益-信息论与编码相关" class="headerlink" title="信息增益(信息论与编码相关)"></a>信息增益(信息论与编码相关)</h5><p>&emsp;&emsp;<strong>熵是表示随机变量不确定性的度量。</strong><br>设x是一个取有限个值的离散随机变量，其概率分布为</p>
@@ -279,11 +280,18 @@ $$
 <p><img src="/images/pasted-9.png" alt="随机变量只取两个值时熵与概率的关系"></p>
 <p>设有两个随机变量X,Y,其联合概率分布为</p>
 <script type="math/tex; mode=display">
-P(X=x_i,Y=y_i) = p_{ij}, i = 1,2,...,n; j = 1,2,...m</script><p>条件熵H(Y|X)表示在已知随机变量X的条件下随机变量Y的不确定性。<br>定义为X给定条件下Y的条件概率分布的熵对X的数学期望</p>
+P(X=x_i,Y=y_i) = p_{ij}, i = 1,2,...,n; j = 1,2,...m</script><p>条件熵H(Y|X)表示在已知随机变量X的条件下随机变量Y的不确定性。<br><strong>定义为X给定条件下Y的条件概率分布的熵对X的数学期望</strong></p>
 <script type="math/tex; mode=display">
 H(Y|X) = \sum^n_{i=1}p_iH(Y|X=x_i)</script><p><strong>定义(信息增益)</strong><br>特征A对训练数据集D的信息增益g(D,A)，定义为集合D的经验熵H(D)与特征A给定条件下D的经验条件熵H(D|A)之差(A与D的互信息),即</p>
 <script type="math/tex; mode=display">
-g(D,A) = H(D) - H(D|A)</script>
+g(D,A) = H(D) - H(D|A)</script><p><img src="/images/pasted-10.png" alt="互信息"><br>决策树学习中的信息增益等价于训练数据集中类与特征的互信息。</p>
+<h6 id="信息增益算法"><a href="#信息增益算法" class="headerlink" title="信息增益算法"></a>信息增益算法</h6><p>&emsp;&emsp;对训练数据集D，计算其每个特征的信息增益，比较它们的大小，选择信息增益最大的特征。<br><strong>输入</strong>：训练数据集D和特征A<br><strong>输出</strong>：特征A对训练数据集D的信息增益g(D,A)<br>（1）<strong>计算数据集D的经验熵H(D)</strong>  </p>
+<script type="math/tex; mode=display">H(D) = -\sum^K_{k=1}\frac{|C_k|}{|D|}log_2\frac{|C_k|}{|D|}</script><p><font color="red">其中K表示分类个数,$|C_k|$表示其中一个分类的样本个数</font><br>（2）<strong>计算特征A对数据集D的经验条件熵H(D|A)</strong>  </p>
+<script type="math/tex; mode=display">H(D|A) = \sum^n_{i=1}\frac{|D_i|}{|D|}H(D_i) = -\sum^n_{i=1}\frac{|D_i|}{|D|}\sum^K_{k=1}\frac{|D_{ik}|}{|D_i|}log_2\frac{|D_{ik}|}{|D_i|}</script><p><font color="red">其中特征A有n个不同的取值</font><br>（3）<strong>计算信息增益</strong></p>
+<script type="math/tex; mode=display">g(D,A) = H(D) - H(D|A)</script><p><strong>代码</strong>计算H(D)<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#计算熵</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">calcShannonEnt</span><span class="params">(dataSet)</span>:</span>   <span class="comment">#calculate Shannon Entropy  计算香农熵</span></span><br><span class="line">    numEntries = len(dataSet)  <span class="comment">#数据集中样本总数</span></span><br><span class="line">    labelCounts = &#123;&#125;           <span class="comment">#分类总数</span></span><br><span class="line">    <span class="keyword">for</span> featVec <span class="keyword">in</span> dataSet:</span><br><span class="line">        currentLabel = featVec[<span class="number">-1</span>]  <span class="comment">#取出数据集中的标签名（分类名）</span></span><br><span class="line">        <span class="keyword">if</span> currentLabel <span class="keyword">not</span> <span class="keyword">in</span> labelCounts.keys():</span><br><span class="line">            labelCounts[currentLabel] = <span class="number">0</span></span><br><span class="line">        labelCounts[currentLabel] += <span class="number">1</span></span><br><span class="line">    shannonEnt = <span class="number">0.0</span></span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> labelCounts:</span><br><span class="line">        prob = float(labelCounts[key])/numEntries</span><br><span class="line">        shannonEnt -= prob * log(prob,<span class="number">2</span>)</span><br><span class="line">    <span class="keyword">return</span> shannonEnt</span><br></pre></td></tr></table></figure></p>
+<p>计算H(D|A)，g(D,A)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#选择最好的数据集划分方式</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">chooseBestFeatureToSplit</span><span class="params">(dataSet)</span>:</span></span><br><span class="line">    numFeatures = len(dataSet[<span class="number">0</span>]) - <span class="number">1</span>    <span class="comment">#特征个数，减去的是所属类别</span></span><br><span class="line">    baseEntropy = calcShannonEnt(dataSet) <span class="comment">#数据集的熵</span></span><br><span class="line">    bestInfoGain = <span class="number">0.0</span>;bestFeature = <span class="number">-1</span> <span class="comment">#最优信息增益，最优特征</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(numFeatures):</span><br><span class="line">        featList = [example[i] <span class="keyword">for</span> example <span class="keyword">in</span> dataSet]  <span class="comment">#将该特征列的数据取到新列表中，即该特征所有的取值</span></span><br><span class="line">        uniqueVals = set(featList)</span><br><span class="line">        newEntropy = <span class="number">0.0</span></span><br><span class="line">        <span class="keyword">for</span> value <span class="keyword">in</span> uniqueVals:        <span class="comment">#依次处理划分的各个子集</span></span><br><span class="line">            subDataSet = splitDataSet(dataSet,i,value)</span><br><span class="line">            prob = len(subDataSet)/float(len(dataSet))</span><br><span class="line">            newEntropy += prob * calcShannonEnt(subDataSet) <span class="comment">#条件熵的计算</span></span><br><span class="line">        infoGain = baseEntropy - newEntropy   <span class="comment">#信息增益（互信息）的计算</span></span><br><span class="line">        <span class="keyword">if</span>(infoGain &gt; bestInfoGain):</span><br><span class="line">            bestInfoGain = infoGain</span><br><span class="line">            bestFeature = i</span><br><span class="line">    <span class="keyword">return</span> bestFeature</span><br></pre></td></tr></table></figure>
+<h5 id="信息增益比"><a href="#信息增益比" class="headerlink" title="信息增益比"></a>信息增益比</h5><h4 id="决策树的生成"><a href="#决策树的生成" class="headerlink" title="决策树的生成"></a>决策树的生成</h4>
       
     </div>
     <footer class="entry-meta entry-footer">
@@ -351,7 +359,7 @@ g(D,A) = H(D) - H(D|A)</script>
     <div id="toc" class="toc-article" style="overflow-y: scroll; max-width: 28%;">
     <strong class="toc-title">文章目录</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义-决策树"><span class="nav-number">1.</span> <span class="nav-text">定义(决策树)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#决策树与if-then规则"><span class="nav-number">1.1.</span> <span class="nav-text">决策树与if-then规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#决策树与条件概率分布"><span class="nav-number">1.2.</span> <span class="nav-text">决策树与条件概率分布</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#决策树学习算法包括特征选择，决策树的生成，决策树的剪枝过程。"><span class="nav-number">1.3.</span> <span class="nav-text">决策树学习算法包括特征选择，决策树的生成，决策树的剪枝过程。</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特征选择"><span class="nav-number">2.</span> <span class="nav-text">特征选择</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#信息增益-信息论与编码相关"><span class="nav-number">2.1.</span> <span class="nav-text">信息增益(信息论与编码相关)</span></a></li></ol></li></ol>
+      <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#定义-决策树"><span class="nav-number">1.</span> <span class="nav-text">定义(决策树)</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#决策树与if-then规则"><span class="nav-number">1.1.</span> <span class="nav-text">决策树与if-then规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#决策树与条件概率分布"><span class="nav-number">1.2.</span> <span class="nav-text">决策树与条件概率分布</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#决策树学习算法包括特征选择，决策树的生成，决策树的剪枝过程。"><span class="nav-number">1.3.</span> <span class="nav-text">决策树学习算法包括特征选择，决策树的生成，决策树的剪枝过程。</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#特征选择"><span class="nav-number">2.</span> <span class="nav-text">特征选择</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#信息增益-信息论与编码相关"><span class="nav-number">2.1.</span> <span class="nav-text">信息增益(信息论与编码相关)</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#信息增益算法"><span class="nav-number">2.1.1.</span> <span class="nav-text">信息增益算法</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#信息增益比"><span class="nav-number">2.2.</span> <span class="nav-text">信息增益比</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#决策树的生成"><span class="nav-number">3.</span> <span class="nav-text">决策树的生成</span></a></li></ol>
     
     </div>
   </aside>
@@ -468,21 +476,6 @@ g(D,A) = H(D) - H(D|A)</script>
   </div>
 
   <a id="rocket" href="#top" class=""></a>
-  <script type="text/javascript" src="/js/totop.js" async=""></script>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":300,"height":600},"mobile":{"show":true}});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+  <script type="text/javascript" src="/js/totop.js" async=""></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"right","width":300,"height":600},"mobile":{"show":true}});</script></body>
 </html>
